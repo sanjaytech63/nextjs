@@ -89,10 +89,18 @@ export default function Header() {
 
                 {/* Auth Buttons */}
                 <div className="lg:flex items-center  hidden  gap-3">
-                    <button onClick={() => { router.push('/sign-up') }} className="font-bold  hover:text-blue-400 hover:text-blue-400 ">
+                    <button onClick={() => {
+                        router.push('/sign-up');
+                        setIsMenuOpen(!isMenuOpen);
+                    }}
+                        className="font-bold  hover:text-blue-400 hover:text-blue-400 ">
                         Sign In
                     </button>
-                    <button onClick={() => router.push('/login')} className="bg-blue-500  hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
+                    <button onClick={() => {
+                        router.push('/login');
+                        setIsMenuOpen(!isMenuOpen);
+                    }}
+                        className="bg-blue-500  hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
                         Sign Up
                     </button>
                 </div>
@@ -100,24 +108,41 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="lg:hidden bg-[#1a1b26cc] backdrop-blur-md absolute inset-x-0  py-4 px-6 z-40">
+                <div className="lg:hidden bg-[#1a1b26cc] backdrop-blur-md absolute inset-x-0 py-4 px-6 z-40">
                     <ul className="flex flex-col items-center space-y-6">
                         {links.map((link, index) => (
-                            <li key={index} onClick={() => setIsMenuOpen(!isMenuOpen)} className="hover:text-blue-400  hover:underline underline-offset-8 decoration-2 font-bold">
+                            <li
+                                key={index}
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                className="hover:text-blue-400 hover:underline underline-offset-8 decoration-2 font-bold"
+                            >
                                 <Link href={link.href}>{link.label}</Link>
                             </li>
                         ))}
-                        <div className="flex flex-col gap-3  items-center mt-4">
-                            <button onClick={() => { router.push('/sign-up'), setIsMenuOpen(!isMenuOpen) }} className="font-bold hover:text-blue-400 hover:text-blue-400 hover:underline underline-offset-8 decoration-2">
+                        <div className="flex flex-col gap-3 items-center mt-4">
+                            <button
+                                onClick={() => {
+                                    router.push('/sign-up');
+                                    setIsMenuOpen(!isMenuOpen);
+                                }}
+                                className="font-bold hover:text-blue-400 hover:underline underline-offset-8 decoration-2"
+                            >
                                 Sign In
                             </button>
-                            <button onClick={() => { router.push('/login'), setIsMenuOpen(!isMenuOpen) }} className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
+                            <button
+                                onClick={() => {
+                                    router.push('/login');
+                                    setIsMenuOpen(!isMenuOpen);
+                                }}
+                                className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full"
+                            >
                                 Sign Up
                             </button>
                         </div>
                     </ul>
                 </div>
             )}
+
         </header>
     );
 }

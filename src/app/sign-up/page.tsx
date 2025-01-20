@@ -1,14 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
 const page = () => {
-    const images = [
+    interface ImageData {
+        img: string;
+    }
+
+    const images: ImageData[] = [
         { img: "https://ucarecdn.com/8f25a2ba-bdcf-4ff1-b596-088f330416ef/" },
         { img: "https://ucarecdn.com/95eebb9c-85cf-4d12-942f-3c40d7044dc6/" },
         { img: "https://ucarecdn.com/be5b0ffd-85e8-4639-83a6-5162dfa15a16/" },
         { img: "https://ucarecdn.com/6f56c0f1-c9c0-4d72-b44d-51a79ff38ea9/" },
         { img: "https://ucarecdn.com/82d7ca0a-c380-44c4-ba24-658723e2ab07/" },
         { img: "https://ucarecdn.com/3277d952-8e21-4aad-a2b7-d484dad531fb/" },
-    ]
+    ];
+
+
     return (
         <div className='flex py-24  font-poppins items-center justify-center dark:bg-gray-900 min-w-screen min-h-screen'>
             <div className="grid mt-10 gap-8">
@@ -72,19 +78,21 @@ const page = () => {
                             className="flex items-center justify-center mt-5 flex-wrap"
                         >
                             {
-                                images.map((image:any, index:any) => {
-                                    return (
-                                        <button key={index} className="hover:scale-105 ease-in-out duration-300 shadow-lg p-2 rounded-lg m-1"  >
-                                            <Image width={500} height={500}
-                                                className="max-w-[25px]"
-                                                src={image.img}
-                                                alt="apple"
-                                            />
-                                        </button>
-                                    )
-                                })
+                                images.map((image: ImageData, index: number) => (
+                                    <button
+                                        key={index}
+                                        className="hover:scale-105 ease-in-out duration-300 shadow-lg p-2 rounded-lg m-1"
+                                    >
+                                        <Image
+                                            width={500}
+                                            height={500}
+                                            className="max-w-[25px]"
+                                            src={image.img}
+                                            alt={`image-${index}`}
+                                        />
+                                    </button>
+                                ))
                             }
-
 
                         </div>
                         <div

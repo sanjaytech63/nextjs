@@ -1,5 +1,6 @@
 import React from 'react'
 import { blogSection } from '@/data'
+import Image from 'next/image'
 const page = () => {
     return (
         <div className='min-h-screen py-16 container mx-auto '>
@@ -19,12 +20,12 @@ const page = () => {
                                 return (
                                     <div key={index} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
                                         <div className="flex-shrink-0">
-                                            <img className="h-48 w-full object-cover" src={section.image} alt="" />
+                                            <Image width={500} height={500} className="h-48 w-full object-cover" src={section.image} alt="" />
                                         </div>
                                         <div className="flex flex-1 flex-col justify-between bg-white p-6">
                                             <div className="flex-1">
                                                 <p className="text-sm font-medium text-indigo-600">
-                                                    <a href="#" className="hover:underline">{section.text}</a>
+                                                    <a href="#" className="hover:underline">{section.author.name}</a>
                                                 </p>
                                                 <a href="#" className="mt-2 block">
                                                     <p className="text-xl font-semibold text-gray-900">{section.title}</p>
@@ -35,7 +36,7 @@ const page = () => {
                                                 <div className="flex-shrink-0">
                                                     <a href="#">
                                                         <span className="sr-only">{section.author.name}</span>
-                                                        <img className="h-10 w-10 rounded-full" src={section.author.image} alt={section.author.name} />
+                                                        <Image width={500} height={500} className="h-10 w-10 rounded-full" src={section.author.image} alt={section.author.name} />
                                                     </a>
                                                 </div>
                                                 <div className="ml-3">

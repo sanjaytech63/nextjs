@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-
+import Image from 'next/image'
  const login = () => {
     return (
         <div className="min-h-screen bg-gray-100 text-gray-900 flex py-20 justify-center">
@@ -92,7 +92,7 @@ import React from 'react'
                 </div>
                 <div className="flex-1 bg-indigo-100 text-center hidden lg:flex">
                     <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
-                        <img src="https://cdn.pixabay.com/photo/2022/12/10/13/46/attack-7647136_1280.png" alt="" />
+                        <Image width={500} height={500} src="https://cdn.pixabay.com/photo/2022/12/10/13/46/attack-7647136_1280.png" alt="" />
                     </div>
                         
                 </div>

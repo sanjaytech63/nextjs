@@ -1,6 +1,6 @@
 import React from 'react';
 import { aboutSection } from '@/data';
-
+import Image from 'next/image';
 const page = () => {
   return (
     <div className="min-h-screen py-24 container mx-auto">
@@ -38,15 +38,20 @@ const page = () => {
                     </p>
                   </div>
                   <div className="relative">
-                    <img
+                    <Image
                       className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
-                      src={image.background}
-                      alt=""
+                      src={image.src}
+                      width={500}
+                      height={500}
+                      alt="Hero Illustration"
                     />
-                    <img
+                    <Image
                       className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110"
                       src={image.src}
                       alt={image.alt}
+                      width={500}
+                      height={500}
+
                     />
                   </div>
                 </div>
@@ -121,10 +126,12 @@ const page = () => {
                   </div>
                   <div className="w-full lg:justify-start justify-center items-start flex">
                     <div className="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
-                      <img
+                      <Image
                         className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"
                         src={image.src}
                         alt={image.alt}
+                        width={500}
+                        height={500}
                       />
                     </div>
                   </div>

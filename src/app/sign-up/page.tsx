@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-const page = () => {
+const SignUp = () => {
     interface ImageData {
         img: string;
     }
@@ -128,4 +128,4 @@ const page = () => {
     )
 }
 
-export default page
+export default SignUp

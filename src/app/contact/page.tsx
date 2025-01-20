@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const Contact = () => {
     return (
         <div className='min-h-screen py-24 container mx-auto '>
             <div className="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[9%]">
@@ -34,4 +34,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Contact

@@ -1,7 +1,8 @@
 import React from 'react';
 import { aboutSection } from '@/data';
 import Image from 'next/image';
-const page = () => {
+
+const About = () => {
   return (
     <div className="min-h-screen py-24 container mx-auto">
       {aboutSection.map((section, index) => {
@@ -51,7 +52,6 @@ const page = () => {
                       alt={image.alt}
                       width={500}
                       height={500}
-
                     />
                   </div>
                 </div>
@@ -146,4 +146,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
- const login = () => {
+ const Login = () => {
     return (
         <div className="min-h-screen bg-gray-100 text-gray-900 flex py-20 justify-center">
             <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -101,4 +101,4 @@ import Image from 'next/image'
     )
 }
 
-export default login
+export default Login

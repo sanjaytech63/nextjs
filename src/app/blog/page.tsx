@@ -1,7 +1,7 @@
 import React from 'react'
 import { blogSection } from '@/data'
 import Image from 'next/image'
-const page = () => {
+const Blog = () => {
     return (
         <div className='min-h-screen py-16 container mx-auto '>
             <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
@@ -62,4 +62,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Blog

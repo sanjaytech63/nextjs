@@ -244,3 +244,56 @@ export const blogSection = [
         "readTime": "11 min"
     }
 ]
+
+
+export const blogDetails = [
+    {
+        "id": "1",
+        "type": "Article",
+        "title": "Boost your conversion rate",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum nulla eu ligula efficitur, sit amet dignissim ante euismod. Nam ac nisl nec urna malesuada tincidunt. Morbi ut magna ante. Integer tincidunt interdum nulla, ac sodales purus hendrerit id. Mauris sed metus at ipsum volutpat maximus.",
+        "image": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+        "author": {
+            "name": "Roel Aufderehar",
+            "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        "date": "Mar 16, 2020",
+        "readTime": "6 min",
+        "tags": ["conversion", "marketing", "sales"],
+        "categories": ["Business", "Marketing"]
+    },
+    {
+        "id": "2",
+        "type": "Video",
+        "title": "How to use search engine optimization to drive sales",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
+        "content": "Search engine optimization (SEO) is an essential strategy for increasing your website's visibility on search engines. This video explains how to optimize your website to attract organic traffic, improve user engagement, and drive conversions.",
+        "image": "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+        "author": {
+            "name": "Brenna Goyette",
+            "image": "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        "date": "Mar 10, 2020",
+        "readTime": "4 min",
+        "tags": ["SEO", "sales", "marketing"],
+        "categories": ["Digital Marketing", "Sales"]
+    },
+    {
+        "id": "3",
+        "type": "Case Study",
+        "title": "Improve your customer experience",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
+        "content": "In this case study, we explore how a company successfully improved their customer experience by implementing personalized touchpoints, improving customer support channels, and optimizing the user journey. Discover the strategies that made a difference and how you can apply them to your business.",
+        "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+        "author": {
+            "name": "Daniela Metz",
+            "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        "date": "Feb 12, 2020",
+        "readTime": "11 min",
+        "tags": ["customer experience", "CX", "strategy"],
+        "categories": ["Customer Service", "Business"]
+    }
+]
+

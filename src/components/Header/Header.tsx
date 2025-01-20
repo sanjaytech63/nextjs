@@ -29,7 +29,7 @@ export default function Header() {
                         alt="Logo"
                         width={150}
                         height={150}
-                        className="object-cover"
+                        className="object-cover cursor-pointer"
                     />
                 </div>
 

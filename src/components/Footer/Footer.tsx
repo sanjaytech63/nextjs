@@ -1,13 +1,15 @@
 
 import Image from "next/image";
+import Link from "next/link";
+
 const footerData = {
     logo: 'http://34.229.58.190/SacredSecret%20logo%20color%20white.svg',
     description: 'Securing your digital assets with advanced technology and an unwavering commitment to privacy.',
     quickLinks: [
-        { label: 'Home', href: '#' },
-        { label: 'Features', href: '#' },
-        { label: 'About Us', href: '#' },
-        { label: 'Contact', href: '#' }
+        { label: 'Home', href: '/' },
+        { label: 'About Us', href: '/about' },
+        { label: 'Contact', href: '/contact' },
+        { label: 'Blog', href: '/blog' }
     ],
     contactInfo: [
         {
@@ -26,6 +28,7 @@ const footerData = {
 };
 
 const Footer = () => {
+
     return (
         <footer className="bg-[#1a1b26cc] text-white  pt-16 pb-8 px-4">
             <div className="container mx-auto px-6">
@@ -46,10 +49,11 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-2">
                             {footerData.quickLinks.map((link, index) => (
-                                <li key={index}>
-                                    <button className="text-white hover:text-accent-100 transition-colors">
-                                        {link.label}
-                                    </button>
+                                <li
+                                    className="hover:text-blue-400"
+                                    key={index}
+                                >
+                                    <Link href={link.href}>{link.label}</Link>
                                 </li>
                             ))}
                         </ul>

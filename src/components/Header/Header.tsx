@@ -1,10 +1,11 @@
 "use client";
-
+import { useRouter } from 'next/navigation'
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
+    const router = useRouter()
     interface Link {
         label: string;
         href: string;
@@ -23,7 +24,7 @@ export default function Header() {
         <header className="fixed w-full text-white z-50 bg-[#1a1b26cc] backdrop-blur-md transition-all duration-300 translate-y-0">
             <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
                 <div className="text-2xl font-bold">
-                    <Image
+                    <Image onClick={() => { router.push('/') }}
                         src="http://34.229.58.190/SacredSecret%20logo%20color%20white.svg"
                         alt="Logo"
                         width={150}
@@ -77,7 +78,7 @@ export default function Header() {
                     <ul className="flex space-x-6">
                         {links.map((link, index) => (
                             <li
-                                className="hover:text-blue-400  font-bold"
+                                className="hover:text-blue-400   font-bold"
                                 key={index}
                             >
                                 <Link href={link.href}>{link.label}</Link>
@@ -87,11 +88,11 @@ export default function Header() {
                 </nav>
 
                 {/* Auth Buttons */}
-                <div className="lg:flex items-center hidden  gap-3">
-                    <button className="font-bold hover:text-blue-400 hover:text-blue-400 ">
+                <div className="lg:flex items-center  hidden  gap-3">
+                    <button onClick={() => { router.push('/sign-up') }} className="font-bold  hover:text-blue-400 hover:text-blue-400 ">
                         Sign In
                     </button>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
+                    <button onClick={() => router.push('/login')} className="bg-blue-500  hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
                         Sign Up
                     </button>
                 </div>
@@ -102,15 +103,15 @@ export default function Header() {
                 <div className="lg:hidden bg-[#1a1b26cc] backdrop-blur-md absolute inset-x-0  py-4 px-6 z-40">
                     <ul className="flex flex-col items-center space-y-6">
                         {links.map((link, index) => (
-                            <li key={index} className="hover:text-blue-400 hover:underline underline-offset-8 decoration-2 font-bold">
+                            <li key={index} onClick={() => setIsMenuOpen(!isMenuOpen)} className="hover:text-blue-400  hover:underline underline-offset-8 decoration-2 font-bold">
                                 <Link href={link.href}>{link.label}</Link>
                             </li>
                         ))}
-                        <div className="flex flex-col gap-3 items-center mt-4">
-                            <button className="font-bold hover:text-blue-400 hover:text-blue-400 hover:underline underline-offset-8 decoration-2">
+                        <div className="flex flex-col gap-3  items-center mt-4">
+                            <button onClick={() => { router.push('/sign-up'), setIsMenuOpen(!isMenuOpen) }} className="font-bold hover:text-blue-400 hover:text-blue-400 hover:underline underline-offset-8 decoration-2">
                                 Sign In
                             </button>
-                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
+                            <button onClick={() => { router.push('/login'), setIsMenuOpen(!isMenuOpen) }} className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">
                                 Sign Up
                             </button>
                         </div>

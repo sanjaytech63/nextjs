@@ -2,7 +2,6 @@
 import { useRouter } from 'next/navigation'
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Header() {
     const router = useRouter()
@@ -22,15 +21,11 @@ export default function Header() {
 
     return (
         <header className="fixed w-full text-white z-50 bg-[#1a1b26cc] backdrop-blur-md transition-all duration-300 translate-y-0">
-            <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
-                <div className="text-2xl font-bold">
-                    <Image onClick={() => { router.push('/') }}
-                        src="http://34.229.58.190/SacredSecret%20logo%20color%20white.svg"
-                        alt="Logo"
-                        width={150}
-                        height={150}
-                        className="object-cover cursor-pointer"
-                    />
+            <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-4">
+                <div onClick={() => {
+                        router.push('/');
+                    }} className="text-2xl font-bold bg-clip-text cursor-pointer text-transparent bg-gradient-to-r from-white to-blue-500">
+                    Tech Features
                 </div>
 
                 {/* Hamburger Menu Icon */}
@@ -90,14 +85,14 @@ export default function Header() {
                 {/* Auth Buttons */}
                 <div className="lg:flex items-center  hidden  gap-3">
                     <button onClick={() => {
-                        router.push('/sign-up');
+                        router.push('/login');
                         setIsMenuOpen(!isMenuOpen);
                     }}
                         className="font-bold  hover:text-blue-400 hover:text-blue-400 ">
                         Sign In
                     </button>
                     <button onClick={() => {
-                        router.push('/login');
+                        router.push('/sign-up');
                         setIsMenuOpen(!isMenuOpen);
                     }}
                         className="bg-blue-500  hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-full">

@@ -1,5 +1,5 @@
-
-import Image from "next/image";
+"use client";
+import { useRouter } from 'next/navigation'
 import Link from "next/link";
 
 const footerData = {
@@ -28,6 +28,7 @@ const footerData = {
 };
 
 const Footer = () => {
+    const router = useRouter()
 
     return (
         <footer className="bg-[#1a1b26cc] text-white  pt-16 pb-8 px-4">
@@ -36,7 +37,11 @@ const Footer = () => {
                     {/* Logo and Description */}
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
                         <div className="flex items-center -mt-4">
-                            <Image src={footerData.logo} alt="Vercel Logo" width={150} height={150} className="object-cover" />
+                        <div onClick={() => {
+                        router.push('/');
+                    }} className="text-2xl font-bold bg-clip-text cursor-pointer text-transparent bg-gradient-to-r from-white to-blue-500">
+                    Tech Features
+                </div>
 
                         </div>
                         <p className="text-white leading-relaxed w-[300px]">

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+
 const SignUp = () => {
     interface ImageData {
         img: string;
@@ -26,7 +27,7 @@ const SignUp = () => {
                         className="border-[20px] border-transparent rounded-[20px] dark:bg-gray-900 bg-white shadow-lg xl:p-10 2xl:p-10 lg:p-10 md:p-10 sm:p-2 m-2"
                     >
                         <h1 className=" pb-6 text-blue-600 font-bold text-5xl dark:text-gray-400 text-center cursor-default">
-                            Sign In
+                            Sign Up
                         </h1>
                         <form action="#" method="post" className="space-y-4">
                             <div>

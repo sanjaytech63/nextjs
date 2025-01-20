@@ -9,7 +9,7 @@ import Image from 'next/image'
                 <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
                     <div className="mt-12 flex flex-col items-center">
                         <h1 className="text-2xl xl:text-3xl font-extrabold">
-                            Sign up
+                            Sign In
                         </h1>
                         <div className="w-full flex-1 mt-8">
                             <div className="flex flex-col items-center">
@@ -32,7 +32,7 @@ import Image from 'next/image'
                                         </svg>
                                     </div>
                                     <span className="ml-4">
-                                        Sign Up with Google
+                                          Sign In with Google
                                     </span>
                                 </button>
 
@@ -45,7 +45,7 @@ import Image from 'next/image'
                                         </svg>
                                     </div>
                                     <span className="ml-4">
-                                        Sign Up with GitHub
+                                          Sign In with GitHub
                                     </span>
                                 </button>
                             </div>
@@ -53,7 +53,7 @@ import Image from 'next/image'
                             <div className="my-12 border-b text-center">
                                 <div
                                     className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                                    Or sign up with e-mail
+                                    Or  sign In with e-mail
                                 </div>
                             </div>
 
@@ -73,7 +73,7 @@ import Image from 'next/image'
                                         <path d="M20 8v6M23 11h-6" />
                                     </svg>
                                     <span className="ml-3">
-                                        Sign Up
+                                    Sign In
                                     </span>
                                 </button>
                                 <p className="mt-6 text-xs text-gray-600 text-center">
